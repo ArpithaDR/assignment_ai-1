@@ -1,0 +1,232 @@
+inputfile
+20 16  1 32 30
+20 12  2 11  8
+28 48  9  1  1
+20 12 10  6  2
+25 30 23 21 10
+* * X X *
+* * X O X
+* * * O *
+* * O O *
+* * * * *
+S R X X R
+S R X O X
+S S R O R
+S R O O R
+S S R R S
+inside evaleach
+0
+0
+63
+28
+It is sneek
+printing for coordinates final val:
+35
+0
+0
+inside evaleach
+0
+1
+59
+28
+it is raid
+printing for coordinates final val:
+31
+inside evaleach
+0
+2
+44
+28
+printing for coordinates final val:
+0
+inside evaleach
+0
+3
+75
+28
+printing for coordinates final val:
+0
+inside evaleach
+0
+4
+73
+28
+it is raid
+printing for coordinates final val:
+45
+0
+4
+inside evaleach
+1
+0
+63
+28
+It is sneek
+printing for coordinates final val:
+35
+inside evaleach
+1
+1
+55
+28
+it is raid
+printing for coordinates final val:
+27
+inside evaleach
+1
+2
+45
+28
+printing for coordinates final val:
+0
+inside evaleach
+1
+3
+54
+28
+printing for coordinates final val:
+0
+inside evaleach
+1
+4
+51
+28
+printing for coordinates final val:
+0
+inside evaleach
+2
+0
+71
+28
+It is sneek
+printing for coordinates final val:
+43
+inside evaleach
+2
+1
+91
+28
+It is sneek
+printing for coordinates final val:
+63
+2
+1
+inside evaleach
+2
+2
+52
+28
+it is raid
+printing for coordinates final val:
+46
+inside evaleach
+2
+3
+44
+28
+printing for coordinates final val:
+0
+inside evaleach
+2
+4
+44
+28
+it is raid
+printing for coordinates final val:
+18
+inside evaleach
+3
+0
+63
+28
+It is sneek
+printing for coordinates final val:
+35
+inside evaleach
+3
+1
+55
+28
+it is raid
+printing for coordinates final val:
+47
+inside evaleach
+3
+2
+53
+28
+printing for coordinates final val:
+0
+inside evaleach
+3
+3
+49
+28
+printing for coordinates final val:
+0
+inside evaleach
+3
+4
+45
+28
+it is raid
+printing for coordinates final val:
+29
+inside evaleach
+4
+0
+68
+28
+It is sneek
+printing for coordinates final val:
+40
+inside evaleach
+4
+1
+73
+28
+It is sneek
+printing for coordinates final val:
+45
+inside evaleach
+4
+2
+66
+28
+it is raid
+printing for coordinates final val:
+58
+inside evaleach
+4
+3
+64
+28
+it is raid
+printing for coordinates final val:
+48
+inside evaleach
+4
+4
+53
+28
+It is sneek
+printing for coordinates final val:
+25
+max i and j
+2
+1
+43
+28
+After calculation
+182
+56
+* * X X *
+* * X O X
+* X * O *
+* * O O *
+* * * * *
+S R X X R
+S R X O X
+S S R O R
+S R O O R
+S S R R S
