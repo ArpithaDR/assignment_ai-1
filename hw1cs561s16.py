@@ -14,6 +14,8 @@ max_i=0
 max_j=0
 AvailCoor= []
 statusboard = []
+outputfile = "next_state.txt"
+logfile = "traverse_log.txt"
 
 for i in range(5):
   statusboard.append([])
@@ -55,27 +57,29 @@ def changeboard():
   positions[max_i][max_j]=myplayer
   pos=getjpos(max_j)
   myplayer_score = myplayer_score + board[max_i][max_j]
+  print statusboard
+  print positions
   if statusboard[max_i][max_j]=="R":
-    if i-1 > 0:
-      if positions[i-1][j]==oppplayer:
-	positions[i-1][j]=myplayer
-        oppplayer_score = calculateScores(oppplayer_score,board[i-1][j],False)
-        myplayer_score = calculateScores(myplayer_score,board[i-1][j],True) 
-    if j-1 > 0:
-      if positions[i][j-1]==oppplayer:
-	positions[i][j-1]=myplayer
-        oppplayer_score = calculateScores(oppplayer_score,board[i][j-1],False)
-        myplayer_score = calculateScores(myplayer_score,board[i][j-1],True) 
-    if j+1 < 5:
-      if positions[i][j+1]==oppplayer:
-	positions[i][j+1]=myplayer
-        oppplayer_score = calculateScores(oppplayer_score,board[i][j+1],False)
-        myplayer_score = calculateScores(myplayer_score,board[i][j+1],True)
-    if i+1 <5:
-      if positions[i+1][j]==oppplayer:
-	positions[i+1][j]=myplayer
-        oppplayer_score = calculateScores(oppplayer_score,board[i+1][j],False)
-        myplayer_score = calculateScores(myplayer_score,board[i+1][j],True)
+    if max_i-1 >= 0:
+      if positions[max_i-1][max_j]==oppplayer:
+	positions[max_i-1][max_j]=myplayer
+        oppplayer_score = calculateScores(oppplayer_score,board[max_i-1][max_j],False)
+        myplayer_score = calculateScores(myplayer_score,board[max_i-1][max_j],True) 
+    if max_j-1 >= 0:
+      if positions[max_i][max_j-1]==oppplayer:
+	positions[max_i][max_j-1]=myplayer
+        oppplayer_score = calculateScores(oppplayer_score,board[max_i][max_j-1],False)
+        myplayer_score = calculateScores(myplayer_score,board[max_i][max_j-1],True) 
+    if max_j+1 < 5:
+      if positions[max_i][max_j+1]==oppplayer:
+	positions[max_i][max_j+1]=myplayer
+        oppplayer_score = calculateScores(oppplayer_score,board[max_i][max_j+1],False)
+        myplayer_score = calculateScores(myplayer_score,board[max_i][max_j+1],True)
+    if max_i+1 < 5:
+      if positions[max_i+1][max_j]==oppplayer:
+	positions[max_i+1][max_j]=myplayer
+        oppplayer_score = calculateScores(oppplayer_score,board[max_i+1][max_j],False)
+        myplayer_score = calculateScores(myplayer_score,board[max_i+1][max_j],True)
   statusboard[max_i][max_j]=myplayer
   print pos + str(max_i+1)
 	
@@ -86,11 +90,11 @@ def evaleach(i,j):
   temp_player_score = myplayer_score + board[i][j]
   temp_opp_score = oppplayer_score
   if val=="R":
-    if i-1 > 0:
+    if i-1 >= 0:
       if positions[i-1][j]==oppplayer:
 	temp_opp_score = calculateScores(temp_opp_score,board[i-1][j],False)
         temp_player_score = calculateScores(temp_player_score,board[i-1][j],True)
-    if j-1 > 0:
+    if j-1 >= 0:
       if positions[i][j-1]==oppplayer:
 	temp_opp_score = calculateScores(temp_opp_score,board[i][j-1],False)
         temp_player_score = calculateScores(temp_player_score,board[i][j-1],True)
@@ -129,7 +133,7 @@ def evalscore():
       if positions[i][j]==oppplayer:
 	oppplayer_score=oppplayer_score+board[i][j]
  
-def move():
+def definemove(cur_player):
   global statusboard
   global AvailCoor
   for i in range(5):
@@ -138,26 +142,26 @@ def move():
       sneak=False
       if positions[i][j]=="*":
 	AvailCoor.append((i,j))
-	if i-1 > 0 and not(raid):
-	  if positions[i-1][j]=="*":
-	    sneak=True
-	  else:
+	if i-1 >= 0 and not(raid):
+	  if positions[i-1][j]==cur_player:
 	    raid=True
-	if j-1 > 0 and not(raid):
-	  if positions[i][j-1]=="*":
-            sneak=True
-          else:
+	  else:
+	    sneak=True
+	if j-1 >= 0 and not(raid):
+	  if positions[i][j-1]==cur_player:
             raid=True
+          else:
+            sneak=True
 	if j+1 < 5 and not(raid):
-	  if positions[i][j+1]=="*":
-            sneak=True
-          else:
+	  if positions[i][j+1]==cur_player:
             raid=True
+          else:
+            sneak=True
 	if i+1 < 5 and not(raid):
-	  if positions[i+1][j]=="*":
-            sneak=True
-          else:
+	  if positions[i+1][j]==cur_player:
             raid=True
+          else:
+            sneak=True
         if(raid):
           statusboard[i][j]="R"
         else:
@@ -201,18 +205,21 @@ positions = []
 BoardValues(filehandle)
 InitialPlayersPositions(filehandle)
 evalscore()
-move()
+definemove(myplayer)
 evalMaxValue()
 changeboard()
 
 for pos in positions:
     print ' '.join(pos)
 
-target_file = open("next_state.txt","w")
+target_file_handle = open(outputfile,"w")
 for pos in positions:
-    target_file.write(''.join(pos))
-    target_file.write("\n")
+    target_file_handle.write(''.join(pos))
+    target_file_handle.write("\n")
 
-target_file.close()
+log_file_handle = open(logfile,"w")
+
+log_file_handle.close()
+target_file_handle.close()
 filehandle.close()
 

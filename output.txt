@@ -1,0 +1,2604 @@
+cutoffdepth:2
+Node,Depth,Value
+root,0,-Infinity
+X * X X *
+* * X O X
+* * * O *
+* * O O *
+* * * * *
+A1,1,35
+depth at min play:1
+A1,1,inf
+X O X X *
+* * X O X
+* * * O *
+* * O O *
+* * * * *
+B1,2,19
+depth at max play:2
+B1,3,19
+B1,2,19
+X * X X O
+* * X O X
+* * * O *
+* * O O *
+* * * * *
+E1,2,5
+depth at max play:2
+E1,3,5
+E1,2,5
+X * X X *
+O * X O X
+* * * O *
+* * O O *
+* * * * *
+A2,2,15
+depth at max play:2
+A2,3,15
+A2,2,5
+X * X X *
+* O X O X
+* * * O *
+* * O O *
+* * * * *
+B2,2,23
+depth at max play:2
+B2,3,23
+B2,2,5
+X * X X *
+* * X O X
+O * * O *
+* * O O *
+* * * * *
+A3,2,7
+depth at max play:2
+A3,3,7
+A3,2,5
+X * X X *
+* * X O X
+* O * O *
+* * O O *
+* * * * *
+B3,2,-13
+depth at max play:2
+B3,3,-13
+B3,2,-13
+X * X X *
+* * O O X
+* * O O *
+* * O O *
+* * * * *
+C3,2,22
+depth at max play:2
+C3,3,22
+C3,2,-13
+X * X X *
+* * X O O
+* * * O O
+* * O O *
+* * * * *
+E3,2,18
+depth at max play:2
+E3,3,18
+E3,2,-13
+X * X X *
+* * X O X
+* * * O *
+O * O O *
+* * * * *
+A4,2,15
+depth at max play:2
+A4,3,15
+A4,2,-13
+X * X X *
+* * X O X
+* * * O *
+* O O O *
+* * * * *
+B4,2,23
+depth at max play:2
+B4,3,23
+B4,2,-13
+X * X X *
+* * X O X
+* * * O *
+* * O O O
+* * * * *
+E4,2,33
+depth at max play:2
+E4,3,33
+E4,2,-13
+X * X X *
+* * X O X
+* * * O *
+* * O O *
+O * * * *
+A5,2,10
+depth at max play:2
+A5,3,10
+A5,2,-13
+X * X X *
+* * X O X
+* * * O *
+* * O O *
+* O * * *
+B5,2,5
+depth at max play:2
+B5,3,5
+B5,2,-13
+X * X X *
+* * X O X
+* * * O *
+* * O O *
+* * O * *
+C5,2,12
+depth at max play:2
+C5,3,12
+C5,2,-13
+X * X X *
+* * X O X
+* * * O *
+* * O O *
+* * * O *
+D5,2,14
+depth at max play:2
+D5,3,14
+D5,2,-13
+X * X X *
+* * X O X
+* * * O *
+* * O O *
+* * * * O
+E5,2,25
+depth at max play:2
+E5,3,25
+E5,2,-13
+root,0,-13
+* X X X *
+* * X O X
+* * * O *
+* * O O *
+* * * * *
+B1,1,31
+depth at min play:1
+B1,1,inf
+O X X X *
+* * X O X
+* * * O *
+* * O O *
+* * * * *
+A1,2,11
+depth at max play:2
+A1,3,11
+A1,2,11
+* X X X O
+* * X O X
+* * * O *
+* * O O *
+* * * * *
+E1,2,1
+depth at max play:2
+E1,3,1
+E1,2,1
+* X X X *
+O * X O X
+* * * O *
+* * O O *
+* * * * *
+A2,2,11
+depth at max play:2
+A2,3,11
+A2,2,1
+* X X X *
+* O X O X
+* * * O *
+* * O O *
+* * * * *
+B2,2,19
+depth at max play:2
+B2,3,19
+B2,2,1
+* X X X *
+* * X O X
+O * * O *
+* * O O *
+* * * * *
+A3,2,3
+depth at max play:2
+A3,3,3
+A3,2,1
+* X X X *
+* * X O X
+* O * O *
+* * O O *
+* * * * *
+B3,2,-17
+depth at max play:2
+B3,3,-17
+B3,2,-17
+* X X X *
+* * O O X
+* * O O *
+* * O O *
+* * * * *
+C3,2,18
+depth at max play:2
+C3,3,18
+C3,2,-17
+* X X X *
+* * X O O
+* * * O O
+* * O O *
+* * * * *
+E3,2,14
+depth at max play:2
+E3,3,14
+E3,2,-17
+* X X X *
+* * X O X
+* * * O *
+O * O O *
+* * * * *
+A4,2,11
+depth at max play:2
+A4,3,11
+A4,2,-17
+* X X X *
+* * X O X
+* * * O *
+* O O O *
+* * * * *
+B4,2,19
+depth at max play:2
+B4,3,19
+B4,2,-17
+* X X X *
+* * X O X
+* * * O *
+* * O O O
+* * * * *
+E4,2,29
+depth at max play:2
+E4,3,29
+E4,2,-17
+* X X X *
+* * X O X
+* * * O *
+* * O O *
+O * * * *
+A5,2,6
+depth at max play:2
+A5,3,6
+A5,2,-17
+* X X X *
+* * X O X
+* * * O *
+* * O O *
+* O * * *
+B5,2,1
+depth at max play:2
+B5,3,1
+B5,2,-17
+* X X X *
+* * X O X
+* * * O *
+* * O O *
+* * O * *
+C5,2,8
+depth at max play:2
+C5,3,8
+C5,2,-17
+* X X X *
+* * X O X
+* * * O *
+* * O O *
+* * * O *
+D5,2,10
+depth at max play:2
+D5,3,10
+D5,2,-17
+* X X X *
+* * X O X
+* * * O *
+* * O O *
+* * * * O
+E5,2,21
+depth at max play:2
+E5,3,21
+E5,2,-17
+root,0,-13
+* * X X X
+* * X O X
+* * * O *
+* * O O *
+* * * * *
+E1,1,45
+depth at min play:1
+E1,1,inf
+O * X X X
+* * X O X
+* * * O *
+* * O O *
+* * * * *
+A1,2,25
+depth at max play:2
+A1,3,25
+A1,2,25
+* O X X X
+* * X O X
+* * * O *
+* * O O *
+* * * * *
+B1,2,29
+depth at max play:2
+B1,3,29
+B1,2,25
+* * X X X
+O * X O X
+* * * O *
+* * O O *
+* * * * *
+A2,2,25
+depth at max play:2
+A2,3,25
+A2,2,25
+* * X X X
+* O X O X
+* * * O *
+* * O O *
+* * * * *
+B2,2,33
+depth at max play:2
+B2,3,33
+B2,2,25
+* * X X X
+* * X O X
+O * * O *
+* * O O *
+* * * * *
+A3,2,17
+depth at max play:2
+A3,3,17
+A3,2,17
+* * X X X
+* * X O X
+* O * O *
+* * O O *
+* * * * *
+B3,2,-3
+depth at max play:2
+B3,3,-3
+B3,2,-3
+* * X X X
+* * O O X
+* * O O *
+* * O O *
+* * * * *
+C3,2,32
+depth at max play:2
+C3,3,32
+C3,2,-3
+* * X X X
+* * X O O
+* * * O O
+* * O O *
+* * * * *
+E3,2,28
+depth at max play:2
+E3,3,28
+E3,2,-3
+* * X X X
+* * X O X
+* * * O *
+O * O O *
+* * * * *
+A4,2,25
+depth at max play:2
+A4,3,25
+A4,2,-3
+* * X X X
+* * X O X
+* * * O *
+* O O O *
+* * * * *
+B4,2,33
+depth at max play:2
+B4,3,33
+B4,2,-3
+* * X X X
+* * X O X
+* * * O *
+* * O O O
+* * * * *
+E4,2,43
+depth at max play:2
+E4,3,43
+E4,2,-3
+* * X X X
+* * X O X
+* * * O *
+* * O O *
+O * * * *
+A5,2,20
+depth at max play:2
+A5,3,20
+A5,2,-3
+* * X X X
+* * X O X
+* * * O *
+* * O O *
+* O * * *
+B5,2,15
+depth at max play:2
+B5,3,15
+B5,2,-3
+* * X X X
+* * X O X
+* * * O *
+* * O O *
+* * O * *
+C5,2,22
+depth at max play:2
+C5,3,22
+C5,2,-3
+* * X X X
+* * X O X
+* * * O *
+* * O O *
+* * * O *
+D5,2,24
+depth at max play:2
+D5,3,24
+D5,2,-3
+* * X X X
+* * X O X
+* * * O *
+* * O O *
+* * * * O
+E5,2,35
+depth at max play:2
+E5,3,35
+E5,2,-3
+root,0,-3
+* * X X *
+X * X O X
+* * * O *
+* * O O *
+* * * * *
+A2,1,35
+depth at min play:1
+A2,1,inf
+O * X X *
+X * X O X
+* * * O *
+* * O O *
+* * * * *
+A1,2,15
+depth at max play:2
+A1,3,15
+A1,2,15
+* O X X *
+X * X O X
+* * * O *
+* * O O *
+* * * * *
+B1,2,19
+depth at max play:2
+B1,3,19
+B1,2,15
+* * X X O
+X * X O X
+* * * O *
+* * O O *
+* * * * *
+E1,2,5
+depth at max play:2
+E1,3,5
+E1,2,5
+* * X X *
+X O X O X
+* * * O *
+* * O O *
+* * * * *
+B2,2,23
+depth at max play:2
+B2,3,23
+B2,2,5
+* * X X *
+X * X O X
+O * * O *
+* * O O *
+* * * * *
+A3,2,7
+depth at max play:2
+A3,3,7
+A3,2,5
+* * X X *
+X * X O X
+* O * O *
+* * O O *
+* * * * *
+B3,2,-13
+depth at max play:2
+B3,3,-13
+B3,2,-13
+* * X X *
+X * O O X
+* * O O *
+* * O O *
+* * * * *
+C3,2,22
+depth at max play:2
+C3,3,22
+C3,2,-13
+* * X X *
+X * X O O
+* * * O O
+* * O O *
+* * * * *
+E3,2,18
+depth at max play:2
+E3,3,18
+E3,2,-13
+* * X X *
+X * X O X
+* * * O *
+O * O O *
+* * * * *
+A4,2,15
+depth at max play:2
+A4,3,15
+A4,2,-13
+* * X X *
+X * X O X
+* * * O *
+* O O O *
+* * * * *
+B4,2,23
+depth at max play:2
+B4,3,23
+B4,2,-13
+* * X X *
+X * X O X
+* * * O *
+* * O O O
+* * * * *
+E4,2,33
+depth at max play:2
+E4,3,33
+E4,2,-13
+* * X X *
+X * X O X
+* * * O *
+* * O O *
+O * * * *
+A5,2,10
+depth at max play:2
+A5,3,10
+A5,2,-13
+* * X X *
+X * X O X
+* * * O *
+* * O O *
+* O * * *
+B5,2,5
+depth at max play:2
+B5,3,5
+B5,2,-13
+* * X X *
+X * X O X
+* * * O *
+* * O O *
+* * O * *
+C5,2,12
+depth at max play:2
+C5,3,12
+C5,2,-13
+* * X X *
+X * X O X
+* * * O *
+* * O O *
+* * * O *
+D5,2,14
+depth at max play:2
+D5,3,14
+D5,2,-13
+* * X X *
+X * X O X
+* * * O *
+* * O O *
+* * * * O
+E5,2,25
+depth at max play:2
+E5,3,25
+E5,2,-13
+root,0,-3
+* * X X *
+* X X O X
+* * * O *
+* * O O *
+* * * * *
+B2,1,27
+depth at min play:1
+B2,1,inf
+O * X X *
+* X X O X
+* * * O *
+* * O O *
+* * * * *
+A1,2,7
+depth at max play:2
+A1,3,7
+A1,2,7
+* O X X *
+* X X O X
+* * * O *
+* * O O *
+* * * * *
+B1,2,11
+depth at max play:2
+B1,3,11
+B1,2,7
+* * X X O
+* X X O X
+* * * O *
+* * O O *
+* * * * *
+E1,2,-3
+depth at max play:2
+E1,3,-3
+E1,2,-3
+* * X X *
+O X X O X
+* * * O *
+* * O O *
+* * * * *
+A2,2,7
+depth at max play:2
+A2,3,7
+A2,2,-3
+* * X X *
+* X X O X
+O * * O *
+* * O O *
+* * * * *
+A3,2,-1
+depth at max play:2
+A3,3,-1
+A3,2,-3
+* * X X *
+* X X O X
+* O * O *
+* * O O *
+* * * * *
+B3,2,-21
+depth at max play:2
+B3,3,-21
+B3,2,-21
+* * X X *
+* X O O X
+* * O O *
+* * O O *
+* * * * *
+C3,2,14
+depth at max play:2
+C3,3,14
+C3,2,-21
+* * X X *
+* X X O O
+* * * O O
+* * O O *
+* * * * *
+E3,2,10
+depth at max play:2
+E3,3,10
+E3,2,-21
+* * X X *
+* X X O X
+* * * O *
+O * O O *
+* * * * *
+A4,2,7
+depth at max play:2
+A4,3,7
+A4,2,-21
+* * X X *
+* X X O X
+* * * O *
+* O O O *
+* * * * *
+B4,2,15
+depth at max play:2
+B4,3,15
+B4,2,-21
+* * X X *
+* X X O X
+* * * O *
+* * O O O
+* * * * *
+E4,2,25
+depth at max play:2
+E4,3,25
+E4,2,-21
+* * X X *
+* X X O X
+* * * O *
+* * O O *
+O * * * *
+A5,2,2
+depth at max play:2
+A5,3,2
+A5,2,-21
+* * X X *
+* X X O X
+* * * O *
+* * O O *
+* O * * *
+B5,2,-3
+depth at max play:2
+B5,3,-3
+B5,2,-21
+* * X X *
+* X X O X
+* * * O *
+* * O O *
+* * O * *
+C5,2,4
+depth at max play:2
+C5,3,4
+C5,2,-21
+* * X X *
+* X X O X
+* * * O *
+* * O O *
+* * * O *
+D5,2,6
+depth at max play:2
+D5,3,6
+D5,2,-21
+* * X X *
+* X X O X
+* * * O *
+* * O O *
+* * * * O
+E5,2,17
+depth at max play:2
+E5,3,17
+E5,2,-21
+root,0,-3
+* * X X *
+* * X O X
+X * * O *
+* * O O *
+* * * * *
+A3,1,43
+depth at min play:1
+A3,1,inf
+O * X X *
+* * X O X
+X * * O *
+* * O O *
+* * * * *
+A1,2,23
+depth at max play:2
+A1,3,23
+A1,2,23
+* O X X *
+* * X O X
+X * * O *
+* * O O *
+* * * * *
+B1,2,27
+depth at max play:2
+B1,3,27
+B1,2,23
+* * X X O
+* * X O X
+X * * O *
+* * O O *
+* * * * *
+E1,2,13
+depth at max play:2
+E1,3,13
+E1,2,13
+* * X X *
+O * X O X
+X * * O *
+* * O O *
+* * * * *
+A2,2,23
+depth at max play:2
+A2,3,23
+A2,2,13
+* * X X *
+* O X O X
+X * * O *
+* * O O *
+* * * * *
+B2,2,31
+depth at max play:2
+B2,3,31
+B2,2,13
+* * X X *
+* * X O X
+X O * O *
+* * O O *
+* * * * *
+B3,2,-5
+depth at max play:2
+B3,3,-5
+B3,2,-5
+* * X X *
+* * O O X
+X * O O *
+* * O O *
+* * * * *
+C3,2,30
+depth at max play:2
+C3,3,30
+C3,2,-5
+* * X X *
+* * X O O
+X * * O O
+* * O O *
+* * * * *
+E3,2,26
+depth at max play:2
+E3,3,26
+E3,2,-5
+* * X X *
+* * X O X
+X * * O *
+O * O O *
+* * * * *
+A4,2,23
+depth at max play:2
+A4,3,23
+A4,2,-5
+* * X X *
+* * X O X
+X * * O *
+* O O O *
+* * * * *
+B4,2,31
+depth at max play:2
+B4,3,31
+B4,2,-5
+* * X X *
+* * X O X
+X * * O *
+* * O O O
+* * * * *
+E4,2,41
+depth at max play:2
+E4,3,41
+E4,2,-5
+* * X X *
+* * X O X
+X * * O *
+* * O O *
+O * * * *
+A5,2,18
+depth at max play:2
+A5,3,18
+A5,2,-5
+* * X X *
+* * X O X
+X * * O *
+* * O O *
+* O * * *
+B5,2,13
+depth at max play:2
+B5,3,13
+B5,2,-5
+* * X X *
+* * X O X
+X * * O *
+* * O O *
+* * O * *
+C5,2,20
+depth at max play:2
+C5,3,20
+C5,2,-5
+* * X X *
+* * X O X
+X * * O *
+* * O O *
+* * * O *
+D5,2,22
+depth at max play:2
+D5,3,22
+D5,2,-5
+* * X X *
+* * X O X
+X * * O *
+* * O O *
+* * * * O
+E5,2,33
+depth at max play:2
+E5,3,33
+E5,2,-5
+root,0,-3
+* * X X *
+* * X O X
+* X * O *
+* * O O *
+* * * * *
+B3,1,63
+depth at min play:1
+B3,1,inf
+O * X X *
+* * X O X
+* X * O *
+* * O O *
+* * * * *
+A1,2,43
+depth at max play:2
+A1,3,43
+A1,2,43
+* O X X *
+* * X O X
+* X * O *
+* * O O *
+* * * * *
+B1,2,47
+depth at max play:2
+B1,3,47
+B1,2,43
+* * X X O
+* * X O X
+* X * O *
+* * O O *
+* * * * *
+E1,2,33
+depth at max play:2
+E1,3,33
+E1,2,33
+* * X X *
+O * X O X
+* X * O *
+* * O O *
+* * * * *
+A2,2,43
+depth at max play:2
+A2,3,43
+A2,2,33
+* * X X *
+* O X O X
+* X * O *
+* * O O *
+* * * * *
+B2,2,51
+depth at max play:2
+B2,3,51
+B2,2,33
+* * X X *
+* * X O X
+O X * O *
+* * O O *
+* * * * *
+A3,2,35
+depth at max play:2
+A3,3,35
+A3,2,33
+* * X X *
+* * O O X
+* O O O *
+* * O O *
+* * * * *
+C3,2,-46
+depth at max play:2
+C3,3,-46
+C3,2,-46
+* * X X *
+* * X O O
+* X * O O
+* * O O *
+* * * * *
+E3,2,46
+depth at max play:2
+E3,3,46
+E3,2,-46
+* * X X *
+* * X O X
+* X * O *
+O * O O *
+* * * * *
+A4,2,43
+depth at max play:2
+A4,3,43
+A4,2,-46
+* * X X *
+* * X O X
+* O * O *
+* O O O *
+* * * * *
+B4,2,-45
+depth at max play:2
+B4,3,-45
+B4,2,-46
+* * X X *
+* * X O X
+* X * O *
+* * O O O
+* * * * *
+E4,2,61
+depth at max play:2
+E4,3,61
+E4,2,-46
+* * X X *
+* * X O X
+* X * O *
+* * O O *
+O * * * *
+A5,2,38
+depth at max play:2
+A5,3,38
+A5,2,-46
+* * X X *
+* * X O X
+* X * O *
+* * O O *
+* O * * *
+B5,2,33
+depth at max play:2
+B5,3,33
+B5,2,-46
+* * X X *
+* * X O X
+* X * O *
+* * O O *
+* * O * *
+C5,2,40
+depth at max play:2
+C5,3,40
+C5,2,-46
+* * X X *
+* * X O X
+* X * O *
+* * O O *
+* * * O *
+D5,2,42
+depth at max play:2
+D5,3,42
+D5,2,-46
+* * X X *
+* * X O X
+* X * O *
+* * O O *
+* * * * O
+E5,2,53
+depth at max play:2
+E5,3,53
+E5,2,-46
+root,0,-3
+* * X X *
+* * X O X
+* * X X *
+* * X O *
+* * * * *
+C3,1,46
+depth at min play:1
+C3,1,inf
+O * X X *
+* * X O X
+* * X X *
+* * X O *
+* * * * *
+A1,2,26
+depth at max play:2
+A1,3,26
+A1,2,26
+* O X X *
+* * X O X
+* * X X *
+* * X O *
+* * * * *
+B1,2,30
+depth at max play:2
+B1,3,30
+B1,2,26
+* * X X O
+* * X O X
+* * X X *
+* * X O *
+* * * * *
+E1,2,16
+depth at max play:2
+E1,3,16
+E1,2,16
+* * X X *
+O * X O X
+* * X X *
+* * X O *
+* * * * *
+A2,2,26
+depth at max play:2
+A2,3,26
+A2,2,16
+* * X X *
+* O X O X
+* * X X *
+* * X O *
+* * * * *
+B2,2,34
+depth at max play:2
+B2,3,34
+B2,2,16
+* * X X *
+* * X O X
+O * X X *
+* * X O *
+* * * * *
+A3,2,18
+depth at max play:2
+A3,3,18
+A3,2,16
+* * X X *
+* * X O X
+* O X X *
+* * X O *
+* * * * *
+B3,2,-2
+depth at max play:2
+B3,3,-2
+B3,2,-2
+* * X X *
+* * X O X
+* * X X O
+* * X O *
+* * * * *
+E3,2,45
+depth at max play:2
+E3,3,45
+E3,2,-2
+* * X X *
+* * X O X
+* * X X *
+O * X O *
+* * * * *
+A4,2,26
+depth at max play:2
+A4,3,26
+A4,2,-2
+* * X X *
+* * X O X
+* * X X *
+* O X O *
+* * * * *
+B4,2,34
+depth at max play:2
+B4,3,34
+B4,2,-2
+* * X X *
+* * X O X
+* * X X *
+* * X O O
+* * * * *
+E4,2,44
+depth at max play:2
+E4,3,44
+E4,2,-2
+* * X X *
+* * X O X
+* * X X *
+* * X O *
+O * * * *
+A5,2,21
+depth at max play:2
+A5,3,21
+A5,2,-2
+* * X X *
+* * X O X
+* * X X *
+* * X O *
+* O * * *
+B5,2,16
+depth at max play:2
+B5,3,16
+B5,2,-2
+* * X X *
+* * X O X
+* * X X *
+* * X O *
+* * O * *
+C5,2,23
+depth at max play:2
+C5,3,23
+C5,2,-2
+* * X X *
+* * X O X
+* * X X *
+* * X O *
+* * * O *
+D5,2,25
+depth at max play:2
+D5,3,25
+D5,2,-2
+* * X X *
+* * X O X
+* * X X *
+* * X O *
+* * * * O
+E5,2,36
+depth at max play:2
+E5,3,36
+E5,2,-2
+root,0,-2
+* * X X *
+* * X O X
+* * * X X
+* * O O *
+* * * * *
+E3,1,18
+depth at min play:1
+E3,1,inf
+O * X X *
+* * X O X
+* * * X X
+* * O O *
+* * * * *
+A1,2,-2
+depth at max play:2
+A1,3,-2
+A1,2,-2
+* O X X *
+* * X O X
+* * * X X
+* * O O *
+* * * * *
+B1,2,2
+depth at max play:2
+B1,3,2
+B1,2,-2
+* * X X O
+* * X O X
+* * * X X
+* * O O *
+* * * * *
+E1,2,-12
+depth at max play:2
+E1,3,-12
+E1,2,-12
+* * X X *
+O * X O X
+* * * X X
+* * O O *
+* * * * *
+A2,2,-2
+depth at max play:2
+A2,3,-2
+A2,2,-12
+* * X X *
+* O X O X
+* * * X X
+* * O O *
+* * * * *
+B2,2,6
+depth at max play:2
+B2,3,6
+B2,2,-12
+* * X X *
+* * X O X
+O * * X X
+* * O O *
+* * * * *
+A3,2,-10
+depth at max play:2
+A3,3,-10
+A3,2,-12
+* * X X *
+* * X O X
+* O * X X
+* * O O *
+* * * * *
+B3,2,-30
+depth at max play:2
+B3,3,-30
+B3,2,-30
+* * X X *
+* * O O X
+* * O O X
+* * O O *
+* * * * *
+C3,2,3
+depth at max play:2
+C3,3,3
+C3,2,-30
+* * X X *
+* * X O X
+* * * X X
+O * O O *
+* * * * *
+A4,2,-2
+depth at max play:2
+A4,3,-2
+A4,2,-30
+* * X X *
+* * X O X
+* * * X X
+* O O O *
+* * * * *
+B4,2,6
+depth at max play:2
+B4,3,6
+B4,2,-30
+* * X X *
+* * X O X
+* * * X O
+* * O O O
+* * * * *
+E4,2,14
+depth at max play:2
+E4,3,14
+E4,2,-30
+* * X X *
+* * X O X
+* * * X X
+* * O O *
+O * * * *
+A5,2,-7
+depth at max play:2
+A5,3,-7
+A5,2,-30
+* * X X *
+* * X O X
+* * * X X
+* * O O *
+* O * * *
+B5,2,-12
+depth at max play:2
+B5,3,-12
+B5,2,-30
+* * X X *
+* * X O X
+* * * X X
+* * O O *
+* * O * *
+C5,2,-5
+depth at max play:2
+C5,3,-5
+C5,2,-30
+* * X X *
+* * X O X
+* * * X X
+* * O O *
+* * * O *
+D5,2,-3
+depth at max play:2
+D5,3,-3
+D5,2,-30
+* * X X *
+* * X O X
+* * * X X
+* * O O *
+* * * * O
+E5,2,8
+depth at max play:2
+E5,3,8
+E5,2,-30
+root,0,-2
+* * X X *
+* * X O X
+* * * O *
+X * O O *
+* * * * *
+A4,1,35
+depth at min play:1
+A4,1,inf
+O * X X *
+* * X O X
+* * * O *
+X * O O *
+* * * * *
+A1,2,15
+depth at max play:2
+A1,3,15
+A1,2,15
+* O X X *
+* * X O X
+* * * O *
+X * O O *
+* * * * *
+B1,2,19
+depth at max play:2
+B1,3,19
+B1,2,15
+* * X X O
+* * X O X
+* * * O *
+X * O O *
+* * * * *
+E1,2,5
+depth at max play:2
+E1,3,5
+E1,2,5
+* * X X *
+O * X O X
+* * * O *
+X * O O *
+* * * * *
+A2,2,15
+depth at max play:2
+A2,3,15
+A2,2,5
+* * X X *
+* O X O X
+* * * O *
+X * O O *
+* * * * *
+B2,2,23
+depth at max play:2
+B2,3,23
+B2,2,5
+* * X X *
+* * X O X
+O * * O *
+X * O O *
+* * * * *
+A3,2,7
+depth at max play:2
+A3,3,7
+A3,2,5
+* * X X *
+* * X O X
+* O * O *
+X * O O *
+* * * * *
+B3,2,-13
+depth at max play:2
+B3,3,-13
+B3,2,-13
+* * X X *
+* * O O X
+* * O O *
+X * O O *
+* * * * *
+C3,2,22
+depth at max play:2
+C3,3,22
+C3,2,-13
+* * X X *
+* * X O O
+* * * O O
+X * O O *
+* * * * *
+E3,2,18
+depth at max play:2
+E3,3,18
+E3,2,-13
+* * X X *
+* * X O X
+* * * O *
+O O O O *
+* * * * *
+B4,2,-17
+depth at max play:2
+B4,3,-17
+B4,2,-17
+* * X X *
+* * X O X
+* * * O *
+X * O O O
+* * * * *
+E4,2,33
+depth at max play:2
+E4,3,33
+E4,2,-17
+* * X X *
+* * X O X
+* * * O *
+X * O O *
+O * * * *
+A5,2,10
+depth at max play:2
+A5,3,10
+A5,2,-17
+* * X X *
+* * X O X
+* * * O *
+X * O O *
+* O * * *
+B5,2,5
+depth at max play:2
+B5,3,5
+B5,2,-17
+* * X X *
+* * X O X
+* * * O *
+X * O O *
+* * O * *
+C5,2,12
+depth at max play:2
+C5,3,12
+C5,2,-17
+* * X X *
+* * X O X
+* * * O *
+X * O O *
+* * * O *
+D5,2,14
+depth at max play:2
+D5,3,14
+D5,2,-17
+* * X X *
+* * X O X
+* * * O *
+X * O O *
+* * * * O
+E5,2,25
+depth at max play:2
+E5,3,25
+E5,2,-17
+root,0,-2
+* * X X *
+* * X O X
+* * * O *
+* X O O *
+* * * * *
+B4,1,27
+depth at min play:1
+B4,1,inf
+O * X X *
+* * X O X
+* * * O *
+* X O O *
+* * * * *
+A1,2,7
+depth at max play:2
+A1,3,7
+A1,2,7
+* O X X *
+* * X O X
+* * * O *
+* X O O *
+* * * * *
+B1,2,11
+depth at max play:2
+B1,3,11
+B1,2,7
+* * X X O
+* * X O X
+* * * O *
+* X O O *
+* * * * *
+E1,2,-3
+depth at max play:2
+E1,3,-3
+E1,2,-3
+* * X X *
+O * X O X
+* * * O *
+* X O O *
+* * * * *
+A2,2,7
+depth at max play:2
+A2,3,7
+A2,2,-3
+* * X X *
+* O X O X
+* * * O *
+* X O O *
+* * * * *
+B2,2,15
+depth at max play:2
+B2,3,15
+B2,2,-3
+* * X X *
+* * X O X
+O * * O *
+* X O O *
+* * * * *
+A3,2,-1
+depth at max play:2
+A3,3,-1
+A3,2,-3
+* * X X *
+* * X O X
+* O * O *
+* X O O *
+* * * * *
+B3,2,-21
+depth at max play:2
+B3,3,-21
+B3,2,-21
+* * X X *
+* * O O X
+* * O O *
+* X O O *
+* * * * *
+C3,2,14
+depth at max play:2
+C3,3,14
+C3,2,-21
+* * X X *
+* * X O O
+* * * O O
+* X O O *
+* * * * *
+E3,2,10
+depth at max play:2
+E3,3,10
+E3,2,-21
+* * X X *
+* * X O X
+* * * O *
+O X O O *
+* * * * *
+A4,2,7
+depth at max play:2
+A4,3,7
+A4,2,-21
+* * X X *
+* * X O X
+* * * O *
+* X O O O
+* * * * *
+E4,2,25
+depth at max play:2
+E4,3,25
+E4,2,-21
+* * X X *
+* * X O X
+* * * O *
+* X O O *
+O * * * *
+A5,2,2
+depth at max play:2
+A5,3,2
+A5,2,-21
+* * X X *
+* * X O X
+* * * O *
+* X O O *
+* O * * *
+B5,2,-3
+depth at max play:2
+B5,3,-3
+B5,2,-21
+* * X X *
+* * X O X
+* * * O *
+* X O O *
+* * O * *
+C5,2,4
+depth at max play:2
+C5,3,4
+C5,2,-21
+* * X X *
+* * X O X
+* * * O *
+* X O O *
+* * * O *
+D5,2,6
+depth at max play:2
+D5,3,6
+D5,2,-21
+* * X X *
+* * X O X
+* * * O *
+* X O O *
+* * * * O
+E5,2,17
+depth at max play:2
+E5,3,17
+E5,2,-21
+root,0,-2
+* * X X *
+* * X O X
+* * * O *
+* * O O X
+* * * * *
+E4,1,17
+depth at min play:1
+E4,1,inf
+O * X X *
+* * X O X
+* * * O *
+* * O O X
+* * * * *
+A1,2,-3
+depth at max play:2
+A1,3,-3
+A1,2,-3
+* O X X *
+* * X O X
+* * * O *
+* * O O X
+* * * * *
+B1,2,1
+depth at max play:2
+B1,3,1
+B1,2,-3
+* * X X O
+* * X O X
+* * * O *
+* * O O X
+* * * * *
+E1,2,-13
+depth at max play:2
+E1,3,-13
+E1,2,-13
+* * X X *
+O * X O X
+* * * O *
+* * O O X
+* * * * *
+A2,2,-3
+depth at max play:2
+A2,3,-3
+A2,2,-13
+* * X X *
+* O X O X
+* * * O *
+* * O O X
+* * * * *
+B2,2,5
+depth at max play:2
+B2,3,5
+B2,2,-13
+* * X X *
+* * X O X
+O * * O *
+* * O O X
+* * * * *
+A3,2,-11
+depth at max play:2
+A3,3,-11
+A3,2,-13
+* * X X *
+* * X O X
+* O * O *
+* * O O X
+* * * * *
+B3,2,-31
+depth at max play:2
+B3,3,-31
+B3,2,-31
+* * X X *
+* * O O X
+* * O O *
+* * O O X
+* * * * *
+C3,2,4
+depth at max play:2
+C3,3,4
+C3,2,-31
+* * X X *
+* * X O O
+* * * O O
+* * O O O
+* * * * *
+E3,2,-4
+depth at max play:2
+E3,3,-4
+E3,2,-31
+* * X X *
+* * X O X
+* * * O *
+O * O O X
+* * * * *
+A4,2,-3
+depth at max play:2
+A4,3,-3
+A4,2,-31
+* * X X *
+* * X O X
+* * * O *
+* O O O X
+* * * * *
+B4,2,5
+depth at max play:2
+B4,3,5
+B4,2,-31
+* * X X *
+* * X O X
+* * * O *
+* * O O X
+O * * * *
+A5,2,-8
+depth at max play:2
+A5,3,-8
+A5,2,-31
+* * X X *
+* * X O X
+* * * O *
+* * O O X
+* O * * *
+B5,2,-13
+depth at max play:2
+B5,3,-13
+B5,2,-31
+* * X X *
+* * X O X
+* * * O *
+* * O O X
+* * O * *
+C5,2,-6
+depth at max play:2
+C5,3,-6
+C5,2,-31
+* * X X *
+* * X O X
+* * * O *
+* * O O X
+* * * O *
+D5,2,-4
+depth at max play:2
+D5,3,-4
+D5,2,-31
+* * X X *
+* * X O X
+* * * O *
+* * O O X
+* * * * O
+E5,2,7
+depth at max play:2
+E5,3,7
+E5,2,-31
+root,0,-2
+* * X X *
+* * X O X
+* * * O *
+* * O O *
+X * * * *
+A5,1,40
+depth at min play:1
+A5,1,inf
+O * X X *
+* * X O X
+* * * O *
+* * O O *
+X * * * *
+A1,2,20
+depth at max play:2
+A1,3,20
+A1,2,20
+* O X X *
+* * X O X
+* * * O *
+* * O O *
+X * * * *
+B1,2,24
+depth at max play:2
+B1,3,24
+B1,2,20
+* * X X O
+* * X O X
+* * * O *
+* * O O *
+X * * * *
+E1,2,10
+depth at max play:2
+E1,3,10
+E1,2,10
+* * X X *
+O * X O X
+* * * O *
+* * O O *
+X * * * *
+A2,2,20
+depth at max play:2
+A2,3,20
+A2,2,10
+* * X X *
+* O X O X
+* * * O *
+* * O O *
+X * * * *
+B2,2,28
+depth at max play:2
+B2,3,28
+B2,2,10
+* * X X *
+* * X O X
+O * * O *
+* * O O *
+X * * * *
+A3,2,12
+depth at max play:2
+A3,3,12
+A3,2,10
+* * X X *
+* * X O X
+* O * O *
+* * O O *
+X * * * *
+B3,2,-8
+depth at max play:2
+B3,3,-8
+B3,2,-8
+* * X X *
+* * O O X
+* * O O *
+* * O O *
+X * * * *
+C3,2,27
+depth at max play:2
+C3,3,27
+C3,2,-8
+* * X X *
+* * X O O
+* * * O O
+* * O O *
+X * * * *
+E3,2,23
+depth at max play:2
+E3,3,23
+E3,2,-8
+* * X X *
+* * X O X
+* * * O *
+O * O O *
+X * * * *
+A4,2,20
+depth at max play:2
+A4,3,20
+A4,2,-8
+* * X X *
+* * X O X
+* * * O *
+* O O O *
+X * * * *
+B4,2,28
+depth at max play:2
+B4,3,28
+B4,2,-8
+* * X X *
+* * X O X
+* * * O *
+* * O O O
+X * * * *
+E4,2,38
+depth at max play:2
+E4,3,38
+E4,2,-8
+* * X X *
+* * X O X
+* * * O *
+* * O O *
+X O * * *
+B5,2,10
+depth at max play:2
+B5,3,10
+B5,2,-8
+* * X X *
+* * X O X
+* * * O *
+* * O O *
+X * O * *
+C5,2,17
+depth at max play:2
+C5,3,17
+C5,2,-8
+* * X X *
+* * X O X
+* * * O *
+* * O O *
+X * * O *
+D5,2,19
+depth at max play:2
+D5,3,19
+D5,2,-8
+* * X X *
+* * X O X
+* * * O *
+* * O O *
+X * * * O
+E5,2,30
+depth at max play:2
+E5,3,30
+E5,2,-8
+root,0,-2
+* * X X *
+* * X O X
+* * * O *
+* * O O *
+* X * * *
+B5,1,45
+depth at min play:1
+B5,1,inf
+O * X X *
+* * X O X
+* * * O *
+* * O O *
+* X * * *
+A1,2,25
+depth at max play:2
+A1,3,25
+A1,2,25
+* O X X *
+* * X O X
+* * * O *
+* * O O *
+* X * * *
+B1,2,29
+depth at max play:2
+B1,3,29
+B1,2,25
+* * X X O
+* * X O X
+* * * O *
+* * O O *
+* X * * *
+E1,2,15
+depth at max play:2
+E1,3,15
+E1,2,15
+* * X X *
+O * X O X
+* * * O *
+* * O O *
+* X * * *
+A2,2,25
+depth at max play:2
+A2,3,25
+A2,2,15
+* * X X *
+* O X O X
+* * * O *
+* * O O *
+* X * * *
+B2,2,33
+depth at max play:2
+B2,3,33
+B2,2,15
+* * X X *
+* * X O X
+O * * O *
+* * O O *
+* X * * *
+A3,2,17
+depth at max play:2
+A3,3,17
+A3,2,15
+* * X X *
+* * X O X
+* O * O *
+* * O O *
+* X * * *
+B3,2,-3
+depth at max play:2
+B3,3,-3
+B3,2,-3
+* * X X *
+* * O O X
+* * O O *
+* * O O *
+* X * * *
+C3,2,32
+depth at max play:2
+C3,3,32
+C3,2,-3
+* * X X *
+* * X O O
+* * * O O
+* * O O *
+* X * * *
+E3,2,28
+depth at max play:2
+E3,3,28
+E3,2,-3
+* * X X *
+* * X O X
+* * * O *
+O * O O *
+* X * * *
+A4,2,25
+depth at max play:2
+A4,3,25
+A4,2,-3
+* * X X *
+* * X O X
+* * * O *
+* O O O *
+* O * * *
+B4,2,-27
+depth at max play:2
+B4,3,-27
+B4,2,-27
+* * X X *
+* * X O X
+* * * O *
+* * O O O
+* X * * *
+E4,2,43
+depth at max play:2
+E4,3,43
+E4,2,-27
+* * X X *
+* * X O X
+* * * O *
+* * O O *
+O X * * *
+A5,2,20
+depth at max play:2
+A5,3,20
+A5,2,-27
+* * X X *
+* * X O X
+* * * O *
+* * O O *
+* O O * *
+C5,2,-38
+depth at max play:2
+C5,3,-38
+C5,2,-38
+* * X X *
+* * X O X
+* * * O *
+* * O O *
+* X * O *
+D5,2,24
+depth at max play:2
+D5,3,24
+D5,2,-38
+* * X X *
+* * X O X
+* * * O *
+* * O O *
+* X * * O
+E5,2,35
+depth at max play:2
+E5,3,35
+E5,2,-38
+root,0,-2
+* * X X *
+* * X O X
+* * * O *
+* * O O *
+* * X * *
+C5,1,38
+depth at min play:1
+C5,1,inf
+O * X X *
+* * X O X
+* * * O *
+* * O O *
+* * X * *
+A1,2,18
+depth at max play:2
+A1,3,18
+A1,2,18
+* O X X *
+* * X O X
+* * * O *
+* * O O *
+* * X * *
+B1,2,22
+depth at max play:2
+B1,3,22
+B1,2,18
+* * X X O
+* * X O X
+* * * O *
+* * O O *
+* * X * *
+E1,2,8
+depth at max play:2
+E1,3,8
+E1,2,8
+* * X X *
+O * X O X
+* * * O *
+* * O O *
+* * X * *
+A2,2,18
+depth at max play:2
+A2,3,18
+A2,2,8
+* * X X *
+* O X O X
+* * * O *
+* * O O *
+* * X * *
+B2,2,26
+depth at max play:2
+B2,3,26
+B2,2,8
+* * X X *
+* * X O X
+O * * O *
+* * O O *
+* * X * *
+A3,2,10
+depth at max play:2
+A3,3,10
+A3,2,8
+* * X X *
+* * X O X
+* O * O *
+* * O O *
+* * X * *
+B3,2,-10
+depth at max play:2
+B3,3,-10
+B3,2,-10
+* * X X *
+* * O O X
+* * O O *
+* * O O *
+* * X * *
+C3,2,25
+depth at max play:2
+C3,3,25
+C3,2,-10
+* * X X *
+* * X O O
+* * * O O
+* * O O *
+* * X * *
+E3,2,21
+depth at max play:2
+E3,3,21
+E3,2,-10
+* * X X *
+* * X O X
+* * * O *
+O * O O *
+* * X * *
+A4,2,18
+depth at max play:2
+A4,3,18
+A4,2,-10
+* * X X *
+* * X O X
+* * * O *
+* O O O *
+* * X * *
+B4,2,26
+depth at max play:2
+B4,3,26
+B4,2,-10
+* * X X *
+* * X O X
+* * * O *
+* * O O O
+* * X * *
+E4,2,36
+depth at max play:2
+E4,3,36
+E4,2,-10
+* * X X *
+* * X O X
+* * * O *
+* * O O *
+O * X * *
+A5,2,13
+depth at max play:2
+A5,3,13
+A5,2,-10
+* * X X *
+* * X O X
+* * * O *
+* * O O *
+* O X * *
+B5,2,8
+depth at max play:2
+B5,3,8
+B5,2,-10
+* * X X *
+* * X O X
+* * * O *
+* * O O *
+* * O O *
+D5,2,-29
+depth at max play:2
+D5,3,-29
+D5,2,-29
+* * X X *
+* * X O X
+* * * O *
+* * O O *
+* * X * O
+E5,2,28
+depth at max play:2
+E5,3,28
+E5,2,-29
+root,0,-2
+* * X X *
+* * X O X
+* * * O *
+* * O O *
+* * * X *
+D5,1,36
+depth at min play:1
+D5,1,inf
+O * X X *
+* * X O X
+* * * O *
+* * O O *
+* * * X *
+A1,2,16
+depth at max play:2
+A1,3,16
+A1,2,16
+* O X X *
+* * X O X
+* * * O *
+* * O O *
+* * * X *
+B1,2,20
+depth at max play:2
+B1,3,20
+B1,2,16
+* * X X O
+* * X O X
+* * * O *
+* * O O *
+* * * X *
+E1,2,6
+depth at max play:2
+E1,3,6
+E1,2,6
+* * X X *
+O * X O X
+* * * O *
+* * O O *
+* * * X *
+A2,2,16
+depth at max play:2
+A2,3,16
+A2,2,6
+* * X X *
+* O X O X
+* * * O *
+* * O O *
+* * * X *
+B2,2,24
+depth at max play:2
+B2,3,24
+B2,2,6
+* * X X *
+* * X O X
+O * * O *
+* * O O *
+* * * X *
+A3,2,8
+depth at max play:2
+A3,3,8
+A3,2,6
+* * X X *
+* * X O X
+* O * O *
+* * O O *
+* * * X *
+B3,2,-12
+depth at max play:2
+B3,3,-12
+B3,2,-12
+* * X X *
+* * O O X
+* * O O *
+* * O O *
+* * * X *
+C3,2,23
+depth at max play:2
+C3,3,23
+C3,2,-12
+* * X X *
+* * X O O
+* * * O O
+* * O O *
+* * * X *
+E3,2,19
+depth at max play:2
+E3,3,19
+E3,2,-12
+* * X X *
+* * X O X
+* * * O *
+O * O O *
+* * * X *
+A4,2,16
+depth at max play:2
+A4,3,16
+A4,2,-12
+* * X X *
+* * X O X
+* * * O *
+* O O O *
+* * * X *
+B4,2,24
+depth at max play:2
+B4,3,24
+B4,2,-12
+* * X X *
+* * X O X
+* * * O *
+* * O O O
+* * * X *
+E4,2,34
+depth at max play:2
+E4,3,34
+E4,2,-12
+* * X X *
+* * X O X
+* * * O *
+* * O O *
+O * * X *
+A5,2,11
+depth at max play:2
+A5,3,11
+A5,2,-12
+* * X X *
+* * X O X
+* * * O *
+* * O O *
+* O * X *
+B5,2,6
+depth at max play:2
+B5,3,6
+B5,2,-12
+* * X X *
+* * X O X
+* * * O *
+* * O O *
+* * O O *
+C5,2,-29
+depth at max play:2
+C5,3,-29
+C5,2,-29
+* * X X *
+* * X O X
+* * * O *
+* * O O *
+* * * X O
+E5,2,26
+depth at max play:2
+E5,3,26
+E5,2,-29
+root,0,-2
+* * X X *
+* * X O X
+* * * O *
+* * O O *
+* * * * X
+E5,1,25
+depth at min play:1
+E5,1,inf
+O * X X *
+* * X O X
+* * * O *
+* * O O *
+* * * * X
+A1,2,5
+depth at max play:2
+A1,3,5
+A1,2,5
+* O X X *
+* * X O X
+* * * O *
+* * O O *
+* * * * X
+B1,2,9
+depth at max play:2
+B1,3,9
+B1,2,5
+* * X X O
+* * X O X
+* * * O *
+* * O O *
+* * * * X
+E1,2,-5
+depth at max play:2
+E1,3,-5
+E1,2,-5
+* * X X *
+O * X O X
+* * * O *
+* * O O *
+* * * * X
+A2,2,5
+depth at max play:2
+A2,3,5
+A2,2,-5
+* * X X *
+* O X O X
+* * * O *
+* * O O *
+* * * * X
+B2,2,13
+depth at max play:2
+B2,3,13
+B2,2,-5
+* * X X *
+* * X O X
+O * * O *
+* * O O *
+* * * * X
+A3,2,-3
+depth at max play:2
+A3,3,-3
+A3,2,-5
+* * X X *
+* * X O X
+* O * O *
+* * O O *
+* * * * X
+B3,2,-23
+depth at max play:2
+B3,3,-23
+B3,2,-23
+* * X X *
+* * O O X
+* * O O *
+* * O O *
+* * * * X
+C3,2,12
+depth at max play:2
+C3,3,12
+C3,2,-23
+* * X X *
+* * X O O
+* * * O O
+* * O O *
+* * * * X
+E3,2,8
+depth at max play:2
+E3,3,8
+E3,2,-23
+* * X X *
+* * X O X
+* * * O *
+O * O O *
+* * * * X
+A4,2,5
+depth at max play:2
+A4,3,5
+A4,2,-23
+* * X X *
+* * X O X
+* * * O *
+* O O O *
+* * * * X
+B4,2,13
+depth at max play:2
+B4,3,13
+B4,2,-23
+* * X X *
+* * X O X
+* * * O *
+* * O O O
+* * * * O
+E4,2,3
+depth at max play:2
+E4,3,3
+E4,2,-23
+* * X X *
+* * X O X
+* * * O *
+* * O O *
+O * * * X
+A5,2,0
+depth at max play:2
+A5,3,0
+A5,2,-23
+* * X X *
+* * X O X
+* * * O *
+* * O O *
+* O * * X
+B5,2,-5
+depth at max play:2
+B5,3,-5
+B5,2,-23
+* * X X *
+* * X O X
+* * * O *
+* * O O *
+* * O * X
+C5,2,2
+depth at max play:2
+C5,3,2
+C5,2,-23
+* * X X *
+* * X O X
+* * * O *
+* * O O *
+* * * O O
+D5,2,-16
+depth at max play:2
+D5,3,-16
+D5,2,-23
+root,0,-2
