@@ -2,6 +2,7 @@
 
 import sys
 import copy
+import os
 
 myplayer=()
 oppplayer=()
@@ -13,10 +14,10 @@ positions=[]
 outputfile = "next_state.txt"
 logfile = "traverse_log.txt"
 tracefile= "trace_state.txt"
-log_file_handle = open(logfile,"w")
 statusboard=[]
 max_i=0
 max_j=0
+AvailCoor= []
 init_player_score=0
 init_opp_score=0
 coor_list=[]
@@ -24,6 +25,11 @@ myplayer_algo=()
 oppplayer_algo=()
 myplayer_cutoffdepth=0
 opplayer_cutoffdepth=0
+
+for i in range(5):
+  statusboard.append([])
+  for j in range(5):
+    statusboard[i].append("0")
 
 def isEmpty(board_state):
   for i in range(5):
@@ -64,6 +70,42 @@ def calculategain(board_state):
   gain = my_player_score-opp_player_score
   return gain
 
+def greedy_changeboard():
+  global positions
+  global myplayer_score
+  global oppplayer_score
+  global statusboard
+  positions[max_i][max_j]=myplayer
+  pos=getjpos(max_j)
+  myplayer_score = myplayer_score + board[max_i][max_j]
+  if statusboard[max_i][max_j]=="R":
+    if max_i-1 >= 0:
+      if positions[max_i-1][max_j]==oppplayer:
+        positions[max_i-1][max_j]=myplayer
+        statusboard[max_i-1][max_j]=myplayer
+        oppplayer_score = calculateScores(oppplayer_score,board[max_i-1][max_j],False)
+        myplayer_score = calculateScores(myplayer_score,board[max_i-1][max_j],True) 
+    if max_j-1 >= 0:
+      if positions[max_i][max_j-1]==oppplayer:
+        positions[max_i][max_j-1]=myplayer
+        statusboard[max_i][max_j-1]=myplayer
+        oppplayer_score = calculateScores(oppplayer_score,board[max_i][max_j-1],False)
+        myplayer_score = calculateScores(myplayer_score,board[max_i][max_j-1],True) 
+    if max_j+1 < 5:
+      if positions[max_i][max_j+1]==oppplayer:
+        positions[max_i][max_j+1]=myplayer
+        statusboard[max_i][max_j+1]=myplayer
+        oppplayer_score = calculateScores(oppplayer_score,board[max_i][max_j+1],False)
+        myplayer_score = calculateScores(myplayer_score,board[max_i][max_j+1],True)
+    if max_i+1 < 5:
+      if positions[max_i+1][max_j]==oppplayer:
+        positions[max_i+1][max_j]=myplayer
+	statusboard[max_i+1][max_j]=myplayer
+        oppplayer_score = calculateScores(oppplayer_score,board[max_i+1][max_j],False)
+        myplayer_score = calculateScores(myplayer_score,board[max_i+1][max_j],True)
+  statusboard[max_i][max_j]=myplayer
+  return positions
+
 def changeboard(i,j,board_state,player):
   my_player = player
   opp_player = findOppPlayer(player) 
@@ -95,28 +137,31 @@ def changeboard(i,j,board_state,player):
   return board_state
 
 def greedy_evaleach(i,j):
+  val = statusboard[i][j]
   final_val=0
+  global max_score
   temp_player_score = myplayer_score + board[i][j]
   temp_opp_score = oppplayer_score
-  if getAction(i,j,positions,myplayer)=="R":
-    print "i and j can be raided:"+str(i) + " " +str(j)
-    if i > 0:
+  if val=="R":
+    if i-1 >= 0:
       if positions[i-1][j]==oppplayer:
         temp_opp_score = calculateScores(temp_opp_score,board[i-1][j],False)
         temp_player_score = calculateScores(temp_player_score,board[i-1][j],True)
-    if j > 0:
+    if j-1 >= 0:
       if positions[i][j-1]==oppplayer:
         temp_opp_score = calculateScores(temp_opp_score,board[i][j-1],False)
         temp_player_score = calculateScores(temp_player_score,board[i][j-1],True)
-    if j < 4:
+    if j+1 < 5:
       if positions[i][j+1]==oppplayer:
         temp_opp_score = calculateScores(temp_opp_score,board[i][j+1],False)
         temp_player_score = calculateScores(temp_player_score,board[i][j+1],True)
-    if i < 4:
+    if i+1 < 5:
       if positions[i+1][j]==oppplayer:
         temp_opp_score = calculateScores(temp_opp_score,board[i+1][j],False)
         temp_player_score = calculateScores(temp_player_score,board[i+1][j],True)
-  final_val = calculateScores(temp_player_score,temp_opp_score,False)
+    final_val = calculateScores(temp_player_score,temp_opp_score,False)
+  if val=="S":
+    final_val = calculateScores(temp_player_score,temp_opp_score,False)
   return final_val
 
 def greedy_evalMaxValue():
@@ -133,9 +178,6 @@ def greedy_evalMaxValue():
           max_i = i
           max_j = j
           max_score=val
-          print max_i
-          print max_j
-          print max_score
 
 def greedy_evalscore():
   global myplayer_score
@@ -146,6 +188,41 @@ def greedy_evalscore():
         myplayer_score=myplayer_score+board[i][j]
       if positions[i][j]==oppplayer:
         oppplayer_score=oppplayer_score+board[i][j]
+
+def greedy_definemove(cur_player):
+  global statusboard
+  for i in range(5):
+    for j in range(5):
+      raid=False
+      sneak=False
+      if positions[i][j]=="*":
+        if i-1 >= 0 and not(raid):
+          if positions[i-1][j]==cur_player:
+            raid=True
+          else:
+            sneak=True
+        if j-1 >= 0 and not(raid):
+          if positions[i][j-1]==cur_player:
+            raid=True
+          else:
+            sneak=True
+        if j+1 < 5 and not(raid):
+          if positions[i][j+1]==cur_player:
+            raid=True
+          else:
+            sneak=True
+        if i+1 < 5 and not(raid):
+          if positions[i+1][j]==cur_player:
+            raid=True
+          else:
+            sneak=True
+        if(raid):
+          statusboard[i][j]="R"
+        else:
+          statusboard[i][j]="S"
+      else:
+        statusboard[i][j]=positions[i][j]
+  return;
 
 def minimax_ab(board_state,depth,maxdepth):
   global coor_list 
@@ -283,6 +360,14 @@ def min_play(coord,board_state,depth,maxdepth):
     log_file_handle.write(pos + str(coord[0]+1) + "," + str(depth) +","+str(val)+"\n")
   return val
 
+def evalscorefor(board_state,player):
+  player_score=0
+  for i in range(5):
+    for j in range(5):
+      if board_state[i][j]==player:
+        player_score=player_score+board[i][j]
+  return player_score
+
 def evalscore(board_state,player):
   my_player_score=0
   opp_player_score=0
@@ -356,10 +441,10 @@ def findOppPlayer(my_player):
   return opp_player
 
 def call_greedy(doPrint):
-  global positions
   greedy_evalscore()
+  greedy_definemove(myplayer)
   greedy_evalMaxValue()
-  positions = changeboard(max_i,max_j,positions,myplayer)
+  greedy_changeboard()
   if doPrint:
     target_file_handle = open(outputfile,"w")
     for pos in positions:
@@ -430,17 +515,10 @@ def call_game_play():
   global oppplayer
   global myplayer_algo
   global oppplayer_algo
-  counter = 0
-  trace_file_handle = open(tracefile,"a")
+  trace_file_handle = open(tracefile,"w")
   while(not(isEmpty(positions))):
-    trace_file_handle.write("myplayer\n")
-    counter = counter +1
-    trace_file_handle.write("counter:" +str(counter)+"\n")
     if myplayer_algo == "1":
-      print counter
-      print positions
-      call_greedy(False)
-      #postions = call_minimax(1,False)      
+      positions = call_minimax(1,False)
     elif myplayer_algo == "2":
       postions = call_minimax(myplayer_cutoffdepth,False)
     elif myplayer_algo == "3":
@@ -448,13 +526,10 @@ def call_game_play():
     for pos in positions:
       trace_file_handle.write(''.join(pos))
       trace_file_handle.write("\n")
-    trace_file_handle.write("oppcalled\n")
     myplayer,oppplayer = oppplayer,myplayer
     if(not(isEmpty(positions))):
-      trace_file_handle.write("counter:" +str(counter)+"\n")
       if oppplayer_algo == "1":
-        call_greedy(False)
-        #postions = call_minimax(1,False)
+        positions = call_minimax(1,False)
       elif oppplayer_algo == "2":
         positions = call_minimax(oppplayer_cutoffdepth,False)
       elif oppplayer_algo == "3":
@@ -471,16 +546,20 @@ filehandle = open(inputfile,"r")
 taskno = (filehandle.readline()).strip()
 
 if taskno=="1":
+   log_file_handle = open(os.devnull,"w")
    initialsetup(filehandle)
    call_greedy(True)
 elif taskno=="2":
+   log_file_handle = open(logfile,"w")
    initialsetup(filehandle)
    call_minimax(cutoffdepth,True)
-   log_file_handle.close()
 elif taskno=="3":
+   log_file_handle = open(logfile,"w")
    initialsetup(filehandle)
    call_alpha_beta(cutoffdepth,True)
    log_file_handle.close()
 elif taskno=="4":
+   log_file_handle = open(os.devnull,"w")
    initialgamesetup(filehandle)
    call_game_play()
+   log_file_handle.close()
