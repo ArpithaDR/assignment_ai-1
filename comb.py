@@ -18,12 +18,24 @@ max_j=0
 AvailCoor= []
 init_player_score=0
 init_opp_score=0
+coor_list=[]
 log_file_handle = open(logfile,"w")
+myplayer_algo=0
+oppplayer_algo=0
+myplayer_cutoffdepth=0
+opplayer_cutoffdepth=0
 
 for i in range(5):
   statusboard.append([])
   for j in range(5):
     statusboard[i].append("0")
+
+def isEmpty(board_state):
+  for i in range(5):
+    for j in range(5):
+      if board_state[i][j]=="*":
+    	return False 
+  return True
 
 def getjpos(j):
   if j==0:
@@ -68,8 +80,6 @@ def greedy_changeboard():
   positions[max_i][max_j]=myplayer
   pos=getjpos(max_j)
   myplayer_score = myplayer_score + board[max_i][max_j]
-  print statusboard
-  print positions
   if statusboard[max_i][max_j]=="R":
     if max_i-1 >= 0:
       if positions[max_i-1][max_j]==oppplayer:
@@ -92,7 +102,7 @@ def greedy_changeboard():
         oppplayer_score = calculateScores(oppplayer_score,board[max_i+1][max_j],False)
         myplayer_score = calculateScores(myplayer_score,board[max_i+1][max_j],True)
   statusboard[max_i][max_j]=myplayer
-  print pos + str(max_i+1)
+  return positions
 
 def changeboard(i,j,board_state,player):
   my_player = player
@@ -122,9 +132,6 @@ def changeboard(i,j,board_state,player):
         board_state[i+1][j]=my_player
         opp_player_score = calculateScores(opp_player_score,board[i+1][j],False)
         my_player_score = calculateScores(my_player_score,board[i+1][j],True)
-  gain = calculategain(board_state)
-  #for pos in board_state:
-    #print ' '.join(pos)
   return board_state
 
 def greedy_evaleach(i,j):
@@ -215,40 +222,42 @@ def greedy_definemove(cur_player):
   return;
 
 def minimax_ab(board_state,depth):
+  global coor_list 
   val = float("-inf")
   log_file_handle.write("Node,Depth,Value,Alpha,Beta\n")
   log_file_handle.write("root,0,-Infinity,-Infinity,Infinity\n")
   avail_moves = getAllMoves(board_state)
+  if not avail_moves:
+    return board_state
   alpha = float("-inf")
   beta = float("inf")
   for coor in avail_moves:
-    temp_max_board = copy.deepcopy(board_state)
+    temp_max_board = [row[:] for row in board_state]
     return_max_board = changeboard(coor[0],coor[1],temp_max_board,myplayer)
     pos=getjpos(coor[1])
-    gain = calculategain(return_max_board)
     cur_score = min_play_ab(coor,return_max_board,int(depth+1),int(cutoffdepth),alpha,beta)
     if cur_score > val:
       val=cur_score
       val_coor=coor
-    if cur_score>alpha:
+    if val>alpha:
       alpha=cur_score
     log_file_handle.write("root,0," + str(val)+","+str(print_ab(alpha))+","+str(print_ab(beta))+"\n")
   final_board =changeboard(val_coor[0],val_coor[1],board_state,myplayer)
+  
   return final_board
 
 def max_play_ab(coord,board_state,depth,cutoffdepth,alpha,beta):
   pos=getjpos(coord[1])
-  if depth==cutoffdepth:
+  avail_moves = getAllMoves(board_state)
+  if isEmpty(board_state) or depth==cutoffdepth:
     score=calculategain(board_state)
     log_file_handle.write(pos + str(coord[0]+1) + "," + str(depth) +","+str(score)+","+str(print_ab(alpha))+","+str(print_ab(beta))+"\n")
     return score
   val = float("-inf")
-  avail_moves = getAllMoves(board_state)
   log_file_handle.write(pos + str(coord[0]+1) + "," + str(depth) +","+"-Infinity"+","+str(print_ab(alpha))+","+str(print_ab(beta))+"\n")
   for coor in avail_moves:
-    temp_max_board = copy.deepcopy(board_state)
+    temp_max_board = [row[:] for row in board_state]
     return_max_board = changeboard(coor[0],coor[1],temp_max_board,myplayer)
-    #log_file_handle.write(pos + str(coor[0]+1) + "," + str(depth) +","+str(calculategain(return_max_board)) + ","+str(print_ab(alpha)) +","+ str(print_ab(beta))+"\n")
     cur_score = min_play_ab(coor,return_max_board,depth+1,cutoffdepth,alpha,beta)
     if cur_score > val:
       val=cur_score
@@ -262,15 +271,15 @@ def max_play_ab(coord,board_state,depth,cutoffdepth,alpha,beta):
 
 def min_play_ab(coord,board_state,depth,cutoffdepth,alpha,beta):
   pos=getjpos(coord[1])
-  if depth==cutoffdepth:
+  avail_moves = getAllMoves(board_state)
+  if isEmpty(board_state) or depth==cutoffdepth:
     score=calculategain(board_state)
     log_file_handle.write(pos + str(coord[0]+1) + "," + str(depth) +","+str(score)+","+str(print_ab(alpha))+","+str(print_ab(beta))+"\n")
     return score
   val = float("inf")
-  avail_moves = getAllMoves(board_state)
   log_file_handle.write(pos + str(coord[0]+1) + "," + str(depth) +","+"Infinity"+","+str(print_ab(alpha))+","+str(print_ab(beta))+"\n")
   for coor in avail_moves:
-    temp_min_board = copy.deepcopy(board_state)
+    temp_min_board = [row[:] for row in board_state]
     return_min_board = changeboard(coor[0],coor[1],temp_min_board,oppplayer)
     cur_score = max_play_ab(coor,return_min_board,depth+1,cutoffdepth,alpha,beta)
     if cur_score < val:
@@ -293,16 +302,17 @@ def print_ab(val):
 
 
 def minimax(board_state,depth):
-  #pos_i,pos_j,val_i,val_j=0
+  global coor_list
   val = float("-inf")
   log_file_handle.write("Node,Depth,Value\n")
   log_file_handle.write("root,0,-Infinity\n")
   avail_moves = getAllMoves(board_state)
+  if not avail_moves:
+    return board_state
   for coor in avail_moves:
-    temp_max_board = copy.deepcopy(board_state)
+    temp_max_board = [row[:] for row in board_state]
     return_max_board = changeboard(coor[0],coor[1],temp_max_board,myplayer)
     pos=getjpos(coor[1])
-    gain = calculategain(return_max_board)
     cur_score = min_play(coor,return_max_board,int(depth+1),int(cutoffdepth))
     if cur_score > val:
       val=cur_score
@@ -312,21 +322,17 @@ def minimax(board_state,depth):
   return final_board
 
 def max_play(coord,board_state,depth,cutoffdepth):
-  #print "depth at max play:" + str(depth)
-  #print ("Depth = %d, Cutoffdepth = %d" % (depth, cutoffdepth))
-  #cur_i,cur_j,val_i,val_j=0
   pos=getjpos(coord[1])
-  if depth==cutoffdepth:
+  avail_moves = getAllMoves(board_state)
+  if isEmpty(board_state) or depth==cutoffdepth:
     score=calculategain(board_state)
     log_file_handle.write(pos + str(coord[0]+1) + "," + str(depth) +","+str(score)+"\n")
     return score
   val = float("-inf")
-  avail_moves = getAllMoves(board_state)
   log_file_handle.write(pos + str(coord[0]+1) + "," + str(depth) +","+"-Infinity\n")
   for coor in avail_moves:
-    temp_max_board = copy.deepcopy(board_state)
+    temp_max_board = [row[:] for row in board_state]
     return_max_board = changeboard(coor[0],coor[1],temp_max_board,myplayer)
-    #log_file_handle.write(pos + str(coor[0]+1) + "," + str(depth) +","+str(calculategain(return_max_board))+"\n")
     cur_score = min_play(coor,return_max_board,depth+1,cutoffdepth)
     if cur_score > val:
       val=cur_score
@@ -334,18 +340,16 @@ def max_play(coord,board_state,depth,cutoffdepth):
   return val
 
 def min_play(coord,board_state,depth,cutoffdepth):
-  #print "depth at min play:" + str(depth)
-  #cur_i,cur_j,val_i,val_j=0
   pos=getjpos(coord[1])
-  if depth==cutoffdepth:
+  avail_moves = getAllMoves(board_state)
+  if isEmpty(board_state) or depth==cutoffdepth:
     score=calculategain(board_state)
     log_file_handle.write(pos + str(coord[0]+1) + "," + str(depth) +","+str(score)+"\n")
     return score
   val = float("inf")
-  avail_moves = getAllMoves(board_state)
   log_file_handle.write(pos + str(coord[0]+1) + "," + str(depth) +","+"Infinity"+"\n")
   for coor in avail_moves:
-    temp_min_board = copy.deepcopy(board_state)
+    temp_min_board = [row[:] for row in board_state]
     return_min_board = changeboard(coor[0],coor[1],temp_min_board,oppplayer)
     cur_score = max_play(coor,return_min_board,depth+1,cutoffdepth)
     if cur_score < val:
@@ -468,6 +472,7 @@ def call_aplha_beta():
     target_file_handle.write("\n")
   target_file_handle.close()
 
+#Common FUnction
 def initialsetup(filehandle):
   global myplayer
   global oppplayer
@@ -478,6 +483,24 @@ def initialsetup(filehandle):
   BoardValues(filehandle)
   InitialPlayersPositions(filehandle)
   filehandle.close()
+
+def initialgamesetup(filehandle):
+  global myplayer
+  global oppplayer
+  global cutoffdepth
+  myplayer = (filehandle.readline()).strip()
+  myplayer_algo = (filehandle.readline()).strip()
+  myplayer_cutoffdepth = (filehandle.readline()).strip()
+  oppplayer = (filehandle.readline()).strip()
+  oppplayer_algo = (filehandle.readline()).strip()
+  oppplayer_cutoffdepth = (filehandle.readline()).strip()
+  BoardValues(filehandle)
+  InitialPlayersPositions(filehandle)
+  filehandle.close()
+
+def call_game_play():
+   
+
 
 #Main function starts over here
 inputfile=sys.argv[2]
