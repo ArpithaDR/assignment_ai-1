@@ -230,8 +230,6 @@ def minimax_ab(board_state,depth,maxdepth):
   log_file_handle.write("Node,Depth,Value,Alpha,Beta\n")
   log_file_handle.write("root,0,-Infinity,-Infinity,Infinity\n")
   avail_moves = getAllMoves(board_state)
-  if not avail_moves:
-    return board_state
   alpha = float("-inf")
   beta = float("inf")
   for coor in avail_moves:
@@ -310,8 +308,6 @@ def minimax(board_state,depth,maxdepth):
   log_file_handle.write("Node,Depth,Value\n")
   log_file_handle.write("root,0,-Infinity\n")
   avail_moves = getAllMoves(board_state)
-  if not avail_moves:
-    return board_state
   for coor in avail_moves:
     temp_max_board = [row[:] for row in board_state]
     return_max_board = changeboard(coor[0],coor[1],temp_max_board,myplayer)
@@ -547,18 +543,31 @@ taskno = (filehandle.readline()).strip()
 
 if taskno=="1":
    initialsetup(filehandle)
+   all_possible_moves = getAllMoves(positions)
+   if not all_possible_moves:
+     sys.exit()
    call_greedy(True)
 elif taskno=="2":
-   log_file_handle = open(logfile,"w")
    initialsetup(filehandle)
+   all_possible_moves = getAllMoves(positions)
+   if not all_possible_moves:
+     sys.exit()
+   log_file_handle = open(logfile,"w")
    call_minimax(cutoffdepth,True)
+   log_file_handle.close()
 elif taskno=="3":
-   log_file_handle = open(logfile,"w")
    initialsetup(filehandle)
+   all_possible_moves = getAllMoves(positions)
+   if not all_possible_moves:
+     sys.exit()
+   log_file_handle = open(logfile,"w")
    call_alpha_beta(cutoffdepth,True)
    log_file_handle.close()
 elif taskno=="4":
-   log_file_handle = open(os.devnull,"w")
    initialgamesetup(filehandle)
+   all_possible_moves = getAllMoves(positions)
+   if not all_possible_moves:
+     sys.exit()
+   log_file_handle = open(os.devnull,"w")
    call_game_play()
    log_file_handle.close()
